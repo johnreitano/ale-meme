@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<% if @meme %>
+  <p>
+    <%= image_tag @meme.url  %>
+  </p>
+  <p>
+    <%= @meme.tagline %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Add New Meme', new_meme_path %>
+</p>
+
+<p>
+  <%= link_to 'See All Memes', memes_path %>
+</p>

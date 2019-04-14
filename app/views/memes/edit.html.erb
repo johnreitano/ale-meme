@@ -1,6 +1,5 @@
-<h1>Editing Meme</h1>
-
-<%= render 'form', meme: @meme %>
-
-<%= link_to 'Show', @meme %> |
-<%= link_to 'Back', memes_path %>
+<%- model_class = Meme -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>
